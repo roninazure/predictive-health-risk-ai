@@ -1,22 +1,22 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import router  # Import your routes module
+from api.routes import router  # ✅ Correct import
 
 app = FastAPI()
 
-# Add CORS middleware
+# ✅ Enable CORS (Allows frontend to access API)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Root endpoint
+# ✅ Root test endpoint
 @app.get("/")
 def read_root():
     return {"message": "Welcome to Predictive Health Risk AI"}
 
-# Include the router with an API prefix
-app.include_router(router, prefix="/api")
+# ✅ Include API routes
+app.include_router(router, prefix="/api")  # ✅ Ensure prefix is "/api"

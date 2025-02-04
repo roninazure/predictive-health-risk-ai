@@ -1,0 +1,20 @@
+[
+  {
+    "name": "John Doe",
+    "steps": 7000,
+    "sleep_hours": 6,
+    "stress_level": "High"
+  },
+  {
+    "name": "Jane Smith",
+    "steps": 12000,
+    "sleep_hours": 7,
+    "stress_level": "Low"
+  },
+  {
+    "name": "Robert Johnson",
+    "steps": 5000,
+    "sleep_hours": 5,
+    "stress_level": "High"
+  }
+]
